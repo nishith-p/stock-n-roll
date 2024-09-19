@@ -12,6 +12,7 @@ import {
   User,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
@@ -117,7 +118,13 @@ const Sidebar = () => {
           isSideBarCollapsed ? "px-4" : "px-8"
         }`}
       >
-        <div>Logo</div>
+        <Image
+          src="https://s3-stocknroll.s3.ap-southeast-1.amazonaws.com/logo.png"
+          alt="Stock-n-Roll Logo"
+          width={27}
+          height={27}
+          className="rounded w-8"
+        />
         <h1
           className={`${
             isSideBarCollapsed ? "hidden" : "block"
